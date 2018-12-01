@@ -6586,7 +6586,7 @@ a.ui-button:active,
 .contentTable p[data-id="3"] {
   height: 200px;
   width: 100%;
-  background: url(/img/demo-board.png) no-repeat;
+  background: url(../img/demo-board.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
   text-indent: -100%; }
@@ -6594,7 +6594,7 @@ a.ui-button:active,
 .contentTable p[data-id="4"] {
   height: 234px;
   width: 100%;
-  background: url(/img/demo-dead.png) no-repeat;
+  background: url(../img/demo-dead.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden; }
   .contentTable p[data-id="4"] em {
@@ -6604,7 +6604,7 @@ a.ui-button:active,
 .contentTable p[data-id="5"] {
   height: 758px;
   width: 100%;
-  background: url(/img/demo-water.png) no-repeat;
+  background: url(../img/demo-water.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden; }
   .contentTable p[data-id="5"] em {
@@ -6614,7 +6614,7 @@ a.ui-button:active,
 .contentTable p[data-id="7"] {
   height: 200px;
   width: 100%;
-  background: url(/img/demo-tree.png) no-repeat;
+  background: url(../img/demo-tree.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden; }
   .contentTable p[data-id="7"] em {
@@ -6624,7 +6624,7 @@ a.ui-button:active,
 .contentTable p[data-id="8"] {
   height: 300px;
   width: 100%;
-  background: url(/img/demo-power.png) no-repeat;
+  background: url(../img/demo-power.png) no-repeat;
   background-size: 100% 100%;
   overflow: hidden; }
   .contentTable p[data-id="8"] em {
@@ -6639,7 +6639,7 @@ a.ui-button:active,
   position: absolute;
   width: 350px;
   height: 170px;
-  background: url("/img/demo-ncdr.png") no-repeat 0 -5px;
+  background: url("../img/demo-ncdr.png") no-repeat 0 -5px;
   background-size: 100% 100%;
   top: 53px;
   right: -350px;
