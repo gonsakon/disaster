@@ -1,0 +1,161 @@
+[
+  {
+    "Time": "2018/08/23 16",
+    "JsonTimeDatas": [
+      {
+        "Subject": "南港區",
+        "Total": 0
+      },
+      {
+        "Subject": "士林區",
+        "Total": 0
+      },
+      {
+        "Subject": "大同區",
+        "Total": 0
+      },
+      {
+        "Subject": "萬華區",
+        "Total": 0
+      },
+      {
+        "Subject": "中山區",
+        "Total": 0
+      },
+      {
+        "Subject": "中正區",
+        "Total": 0
+      },
+      {
+        "Subject": "信義區",
+        "Total": 0
+      },
+      {
+        "Subject": "內湖區",
+        "Total": 0
+      },
+      {
+        "Subject": "北投區",
+        "Total": 0
+      },
+      {
+        "Subject": "文山區",
+        "Total": 0
+      },
+      {
+        "Subject": "松山區",
+        "Total": 0
+      },
+      {
+        "Subject": "大安區",
+        "Total": 0
+      }
+    ]
+  },
+  {
+    "Time": "2018/08/23 16",
+    "JsonTimeDatas": [
+      {
+        "Subject": "南港區",
+        "Total": 0
+      },
+      {
+        "Subject": "士林區",
+        "Total": 50
+      },
+      {
+        "Subject": "大同區",
+        "Total": 0
+      },
+      {
+        "Subject": "萬華區",
+        "Total": 0
+      },
+      {
+        "Subject": "中山區",
+        "Total": 0
+      },
+      {
+        "Subject": "中正區",
+        "Total": 0
+      },
+      {
+        "Subject": "信義區",
+        "Total": 0
+      },
+      {
+        "Subject": "內湖區",
+        "Total": 0
+      },
+      {
+        "Subject": "北投區",
+        "Total": 100
+      },
+      {
+        "Subject": "文山區",
+        "Total": 0
+      },
+      {
+        "Subject": "松山區",
+        "Total": 0
+      },
+      {
+        "Subject": "大安區",
+        "Total": 0
+      }
+    ]
+  },
+  {
+    "Time": "2018/08/23 16",
+    "JsonTimeDatas": [
+      {
+        "Subject": "南港區",
+        "Total": 0
+      },
+      {
+        "Subject": "士林區",
+        "Total": 50
+      },
+      {
+        "Subject": "大同區",
+        "Total": 80
+      },
+      {
+        "Subject": "萬華區",
+        "Total": 50
+      },
+      {
+        "Subject": "中山區",
+        "Total": 50
+      },
+      {
+        "Subject": "中正區",
+        "Total": 20
+      },
+      {
+        "Subject": "信義區",
+        "Total": 0
+      },
+      {
+        "Subject": "內湖區",
+        "Total": 20
+      },
+      {
+        "Subject": "北投區",
+        "Total": 100
+      },
+      {
+        "Subject": "文山區",
+        "Total": 0
+      },
+      {
+        "Subject": "松山區",
+        "Total": 20
+      },
+      {
+        "Subject": "大安區",
+        "Total": 20
+      }
+  ]
+}
+]

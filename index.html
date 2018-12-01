@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="img/favicon_48.ico" rel="shortcut icon" type="image/x-icon"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>EagleEYE 防災戰略平台</title>
+  <meta property="og:title" content=""/>
+  <meta property="og:description" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:locale" content="zh_TW"/>
+  <link rel="stylesheet" href="css/c3.min.css"/>
+  <link rel="stylesheet" href="css/all.css?1543563242427"/>
+  <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/d3.v3.min.js"></script>
+  <!-- custom files-->
+  <script type="text/javascript" src="js/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="js/fisheye.js?0.0.3"></script>
+</head>
+<body>
+  <div class="container header">
+    <div class="header__ncdr"></div>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark"><a href="index.html" class="navbar-brand"> <img src="img/logo.svg"/><span>EagleEYE </span></a>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">歷年災害</a>
+              <div aria-labelledby="navbarDropdown" class="dropdown-menu"><a href="#" class="dropdown-item">賀伯颱風</a><a href="#" class="dropdown-item">高雄氣爆</a></div>
+            </li>
+            <li class="nav-item"><a href="edit.html" class="nav-link">編輯圖表</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container mt-2 mb-3">
+      <div class="row topControl align-items-center ml-4 mr-4">
+        <div class="m-auto mr-sm-auto">
+          <div class="topControl__title text-center text-sm-left">賀伯颱風</div>
+        </div>
+        <div class="flex-grow-1 ml-4 d-none d-lg-block">
+          <div class="topControl__message d-flex justify-content-between align-items-center">
+            <div class="topControl__message__title">NCDR 推播</div>
+            <div class="topControl__message__content">[颱風強度及命名] 中度颱風，國際命名：HATO，中文譯名：賀伯。 [颱風動態] 根據最新氣象</div>
+            <div class="topControl__message__delete"><img src="img/ic-cancel.svg"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-page container">
+      <div class="row"></div>
+    </div>
+    <div class="dashboard-index container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-9">
+          <div data-id="3" class="dashboard-row dashboardDrag border p-2 mb-3 drag-leavePeople">
+            <div class="row align-items-center">
+              <div class="col-6">
+                <h2>撤離人數</h2>
+              </div>
+              <div class="col-6 text-right"><em class="pr-2 num">3844</em></div>
+            </div>
+            <div style="height:200px" class="js-leavePeople"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 columnLeft">
+              <div style="display:none" class="svgMap">
+                <div class="svgMap-message">
+                  <div class="svgMap__title">台北市目前尚有 <em class="svgMap__title__num">265</em> 處積水</div>
+                  <div class="colorModel">
+                    <div class="colorModel__title">台北市淹水地圖</div>
+                    <div style="font-size:20px" class="title colorModel__time">發生時間：<span></span>點</div>
+                    <div class="sliderControl">
+                      <div class="sliderControl__left"><img src="img/caret-left.svg" alt=""/></div>
+                      <div id="slider"></div>
+                      <div class="sliderControl__right"><img src="img/caret-right.svg" alt=""/></div>
+                    </div>
+                  </div>
+                  <div class="svgMap-jsMessage">
+                    <h2></h2>
+                    <h3><em class="num"></em>處</h3>
+                  </div>
+                  <div class="svgMap-info"><img src="img/map-info.png"/></div>
+                </div>
+                <div class="svgMap-map"></div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 columnRight">
+              <div data-id="5" style="display:none" class="dashboard-row dashboardDrag border p-2 mb-3 drag-tree">
+                <div class="row">
+                  <div class="col-6">
+                    <h2>路樹災情</h2>
+                  </div>
+                  <div class="col-6 text-right"><em class="pr-2 num">0</em></div>
+                  <div style="height:200px;magin-bottom:1em" class="js-fullWater"></div>
+                </div>
+              </div>
+              <div style="display:none !important" class="dashboardDrag peopleDashboard d-flex d-justify-content-between drag-hurt">
+                <div class="peopleDashboard-hurt"><i><img src="img/icon-hurt.svg"/></i>
+                  <h3>受傷人數</h3>
+                  <p>5</p>
+                </div>
+                <div class="peopleDashboard-dead"><i><img src="img/icon-dead.svg"/></i>
+                  <h3>死亡人數</h3>
+                  <p>0</p>
+                </div>
+                <div class="peopleDashboard-missing"><i><img src="img/icon-missing.svg"/></i>
+                  <h3>失蹤人數</h3>
+                  <p>5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3 mt-2 mt-sm-0"><img src="img/rightbanner.png" alt=""/></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/d3.min.js"></script>
+  <script src="js/c3.js"></script>
+  <script src="js/all-min.js"></script>
+</body>

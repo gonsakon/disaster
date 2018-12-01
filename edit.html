@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="img/favicon_48.ico" rel="shortcut icon" type="image/x-icon"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>EagleEYE 防災戰略平台</title>
+  <meta property="og:title" content=""/>
+  <meta property="og:description" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:locale" content="zh_TW"/>
+  <link rel="stylesheet" href="css/c3.min.css"/>
+  <link rel="stylesheet" href="css/all.css?1543563242386"/>
+  <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/d3.v3.min.js"></script>
+  <!-- custom files-->
+  <script type="text/javascript" src="js/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="js/fisheye.js?0.0.3"></script>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark"><a href="index.html" class="navbar-brand"> <img src="img/logo.svg"/><span>EagleEYE </span></a>
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">歷年災害</a>
+            <div aria-labelledby="navbarDropdown" class="dropdown-menu"><a href="#" class="dropdown-item">賀伯颱風</a><a href="#" class="dropdown-item">高雄氣爆</a></div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">編輯圖表</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container mt-2 mb-3">
+    <div class="row topControl align-items-center ml-4 mr-4">
+      <div class="m-auto mr-sm-auto">
+        <div class="topControl__title text-center text-sm-left">賀伯颱風</div>
+      </div>
+      <div class="flex-grow-1 ml-4 d-none d-sm-block">
+        <div class="topControl__message d-flex justify-content-between align-items-center">
+          <div class="topControl__message__title">NCDR 推播</div>
+          <div class="topControl__message__content">| [颱風強度及命名] 中度颱風，國際命名：HATO，中文譯名：賀伯。 [颱風動態] 根據最新氣象</div>
+          <div class="topControl__message__delete"><img src="img/ic-cancel.svg"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-page container"></div>
+  <div class="dashboard-index container">
+    <div class="row">
+      <div class="col-sm-12 col-md-9">
+        <div class="row">
+          <div class="contentTable"></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mt-2 mt-sm-0">
+        <div class="editDashboard">
+          <h2>編輯圖表</h2>
+          <div class="setcolumn p-3">
+            <p>請填寫表格欄寬：</p>列：
+            <input type="text" class="rows mb-2"/><br/>欄：
+            <input type="cell" class="cell  mb-3"/>
+            <table class="dragTable">
+              <tbody>
+                <tr></tr>
+              </tbody>
+            </table>
+            <div class="text-center d-flex justify-content-center">
+              <input type="button" style="display: block;" value="產生表格" class="createTable"/>
+            </div>
+          </div>
+          <div style="padding-left:20px" class="APIArea">
+            <div role="group" aria-label="Basic example" class="btn-group">
+              <button type="button" class="btn btn-secondary jsDragTab1">民生公共物聯網 </button>
+              <button type="button" class="btn btn-info jsDragTab2">中央</button>
+              <button type="button" class="btn btn-success jsDragTab3">地方政府</button>
+            </div>
+          </div>
+          <div id="softableAside">
+            <p data-id="3"> <em>撤離人數</em></p>
+            <p data-id="7"> <em>路樹災情</em></p>
+            <p data-id="5"> <em>積水災情</em></p>
+            <p data-id="4"> <em>死亡受傷失蹤</em></p>
+            <p data-id="8">招牌鐵皮倒塌</p>
+            <p data-id="10">農損統計</p>
+            <p data-id="11">漁損統計</p>
+            <p data-id="18">土石流災情</p>
+          </div>
+          <div id="softableAside2" style="display:none">
+            <p data-id="12">停水戶數</p>
+            <p data-id="8"> <em>停電戶數</em></p>
+          </div>
+          <div id="softableAside3" style="display:none">
+            <p data-id="12"> <em>洩洪池 API</em></p>
+            <p data-id="8"> <em> CCTV</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/Sortable.js"></script>
+  <script src="js/edit.js"></script>
+  <script src="js/d3.min.js"></script>
+  <script src="js/c3.js"></script>
+  <script src="js/all-min.js"></script>
+</body>
